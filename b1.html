@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Chuyển đổi giữa feet và meters</h1>
+
+<select id="chuyendoi1" >
+    <option value="feet">Feet</option>
+    <option value="meter">Meter</option>
+</select>
+<br>
+<br>
+
+<select id="chuyendoi2">
+    <option value="meter">Meet</option>
+    <option value="feet">Feet</option>
+</select>
+<br>
+<br>
+
+
+<input id="nhapso" placeholder="Nhập số"/>
+<p id="demo"></p>
+<button onclick="convertFeetToMeter()">Chuyển Đổi</button>
+<script>
+    function convertFeetToMeter() {
+        let nhapso = document.getElementById("nhapso").value;
+        let chuyen = document.getElementById("chuyendoi1").value;
+        let doi = document.getElementById("chuyendoi2").value;
+        let result = 0;
+        if (chuyen == "feet" && doi == "meter") {
+            result =  nhapso * 0.3048;
+        } else {
+            if (chuyen == "meter" && doi == "feet") {
+                result =  nhapso * 3.2808;
+            }
+        }
+        document.getElementById("demo").innerHTML = result;
+    }
+
+</script>
+</body>
+</html>
